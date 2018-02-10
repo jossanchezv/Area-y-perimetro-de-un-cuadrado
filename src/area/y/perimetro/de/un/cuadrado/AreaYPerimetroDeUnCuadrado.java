@@ -1,21 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package area.y.perimetro.de.un.cuadrado;
 
-/**
- *
- * @author ASUS
- */
-public class AreaYPerimetroDeUnCuadrado {
+import java.util.Scanner;
 
-    /**
-     * @param args the command line arguments
-     */
+
+public class AreaYPerimetroDeUnCuadrado {
+    
     public static void main(String[] args) {
-        // TODO code application logic here
+       int lado ;
+        System.out.println("Bienvenido, este programa le ayuda a calcular el area y el perimetro de un cuadrado, Necesitaremos unicamente la medida de uno de los lados del cuadrado.");
+        System.out.println("Ingrese el lado del cuadrado");
+        Scanner sc = new Scanner (System.in);
+        lado = sc.nextInt();
+        if (lado<0){
+            System.out.println("No se puede calcular con longitudes negativas.");
+        }
+        else{
+        System.out.println("El area es: "+(lado*lado)+".");
+        System.out.println("El perimetro es: " + (lado*4)+".");
+        }
     }
     
 }
